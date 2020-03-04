@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user-service/user.service';
@@ -44,8 +44,13 @@ export class DriverListComponent implements OnInit {
                  'name': element.firstName+" "+element.lastName,
                'origin':element.hCity+","+element.hState, 
                 'email': element.email, 
+<<<<<<< Updated upstream
                 'phone':element.phoneNumber,
                 'seats':car.seats
+=======
+                'phone':element.phone_number,
+                //'seats':car.seats 
+>>>>>>> Stashed changes
               });
           });
       });
@@ -139,6 +144,7 @@ displayDriversList(origin, drivers) {
     var outputDiv = document.getElementById('output');
     drivers.forEach(element => {
 
+      
       var service = new google.maps.DistanceMatrixService;
       service.getDistanceMatrix({
         origins: origins,
@@ -156,6 +162,7 @@ displayDriversList(origin, drivers) {
           var results = response.rows[0].elements;
           //console.log(results[0].distance.text);
           var name =  element.name;
+<<<<<<< Updated upstream
           outputDiv.innerHTML += `<tr><td class="col">${name}</td>
                                   <td class="col">${results[0].distance.text}</td>
                                   <td class="col">${results[0].duration.text}</td>
@@ -188,6 +195,14 @@ displayDriversList(origin, drivers) {
                                       <div #maps id="gmap" class="img-responsive"></div>
                                   </div>
                                 </td></tr>`;
+=======
+          if(results[0].distance.value < 26400){
+            element.distance = results[0].distance.text;
+            element.time = results[0].duration.text;
+            return element;
+            }
+         
+>>>>>>> Stashed changes
       }
     });
     

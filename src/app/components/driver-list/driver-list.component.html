@@ -23,8 +23,13 @@
            <th scope="col">Name</th>
            <th scope="col">Distance</th>
            <th scope="col">Time</th>
-           <th scope="col">Seats</th>
            <th scope="col">View Info</th>
+         </tr>
+         <tr *ngFor="let driver of drivers">
+            <td>{{driver.name}}</td>
+            <td>{{driver.distance}}</td>
+            <td>{{driver.time}}</td>
+            <td><app-driver-contact-modal [driver]="driver"></app-driver-contact-modal></td>
          </tr>
        </thead>
        <tbody id="output"></tbody>

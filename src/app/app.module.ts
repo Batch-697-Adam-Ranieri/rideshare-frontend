@@ -21,9 +21,17 @@ import { EditEmployeeComponent } from './components/edit-employee/edit-employee.
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalModule } from 'node_modules/ngx-bootstrap';
+<<<<<<< Updated upstream
+=======
+import { RegisterComponent } from './Components/register/register.component';
+import { SignupModalComponent } from './Components/sign-up-modal/sign-up-modal.component';
+import { ProfileMembershipComponent } from './components/profile-membership/profile-membership.component'
+import { DriverContactModalComponent } from './components/driver-contact-modal/driver-contact-modal.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
+    DriverContactModalComponent,
     AppComponent,
     HomePageComponent,
     RegisterComponent,
