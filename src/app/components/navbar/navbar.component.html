@@ -14,7 +14,7 @@
   <div *ngIf="currentEmployee != ''" class="collapse navbar-collapse myColapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/drivers"><span class="borderbottom">Drivers</span></a>
+        <a class="nav-link" routerLink="/drivers"><span class="borderbottom" id="driver-btn">Drivers</span></a>
       </li>
       <li class="nav-item active dropdown">
         <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -28,7 +28,7 @@
         </a>
 
         <div class="dropdown-menu myDropDown" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" navigatebyUrl="/profile">Profile</a>
+          <a class="dropdown-item" navigatebyUrl="/profile" id="profile-btn">Profile</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" (click)="logout()" id="logout-btn">Log Out</a>
         </div>
