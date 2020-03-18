@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfileMembershipComponent } from './profile-membership.component';
+import { LocationModalComponent } from './location-modal.component';
 
-describe('ProfileMembershipComponent', () => {
-  let component: ProfileMembershipComponent;
-  let fixture: ComponentFixture<ProfileMembershipComponent>;
+describe('LocationModalComponent', () => {
+  let component: LocationModalComponent;
+  let fixture: ComponentFixture<LocationModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileMembershipComponent ]
+      declarations: [ LocationModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfileMembershipComponent);
+    fixture = TestBed.createComponent(LocationModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

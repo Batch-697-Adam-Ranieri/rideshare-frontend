@@ -10,20 +10,22 @@
   </div>
   <div class="modal-body">
     <label id="firstname" for="firstname">First Name</label>
-    <input (keydown)="firstNameError = ''" id="firstname" type="text" [(ngModel)]="fname" class="form-control" />
+    <input (keydown)="firstNameError = ''" id="firstname2" type="text" [(ngModel)]="fname" class="form-control" />
     <p *ngIf="firstNameError != ''" class="error">{{firstNameError}}</p>
 
     <label id="lastname" for="lastname">Last Name</label>
-    <input (keydown)="lastNameError = ''" id="lastname" type="text" [(ngModel)]="lname" class="form-control" />
+    <input (keydown)="lastNameError = ''" id="lastname2" type="text" [(ngModel)]="lname" class="form-control" />
     <p *ngIf="lastNameError != ''" class="error">{{lastNameError}}</p>
 
     <label id="email" for="email">Email</label>
-    <input (keydown)="emailError = ''" id="email" type="email" [(ngModel)]="email" class="form-control"/>
+    <input (keydown)="emailError = ''" id="email2" type="email" [(ngModel)]="email" class="form-control"/>
     <p *ngIf="emailError != ''" class="error">{{emailError}}</p>
 
+
     <label id="phone" for="phoneNumber">Phone Number</label>
+
     <input (keydown)="phoneNumberError = ''" id="phoneNumber" type="text" [(ngModel)]="phone" class="form-control" />
-    <p *ngIf="phoneNumberError != ''" class="error">{{phoneNumberError}}</p>
+    <p >{{phoneNumberError}}</p>
 
     <label id="username" for="userName">User Name</label>
     <input (keydown)="userNameError = ''" id="userName" type="text" [(ngModel)]="username" class="form-control" />
